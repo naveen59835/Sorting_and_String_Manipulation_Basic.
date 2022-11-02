@@ -56,28 +56,23 @@ public class SortingCities {
     }
 
     public Object toFindTheCity(int[] distance) {
-        int[] distanceOfCity = new int[distance.length];
-        for (int index = 0; index < distance.length; index++) {
-            distanceOfCity[index] = Integer.valueOf((String.valueOf(distance[index])));
-            if (distanceOfCity[index] >= 270) {
-                return distance[index];
+        for (int i = 0; i < distance.length; i++) {
+            if (distance[i] > 270) {
+                return distance[i];
             }
 
         }
-        return null;
+        return " ";
     }
 
     public Object tofindTheCityAbove(int[] distance) {
-
-        int[] distanceOfCity = new int[distance.length];
         for (int index = 0; index < distance.length; index++) {
-            distanceOfCity[index] = Integer.valueOf((String.valueOf(distance[index])));
-            if (distanceOfCity[index] >= 50) {
+            if (distance[index] >= 50) {
                 return distance[index];
             }
 
         }
-        return null;
+        return " ";
     }
 
 
