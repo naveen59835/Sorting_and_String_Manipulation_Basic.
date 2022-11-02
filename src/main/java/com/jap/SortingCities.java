@@ -14,7 +14,7 @@ public class SortingCities {
 
         int[] kilometers = sortingCities.citySorting(distance);
         for (int kilometer : distance) {
-            System.out.println("Hi Caroline the shortest distance From Zurich is sorted as " + kilometer);
+            System.out.println(kilometer);
 
 
         }
@@ -23,8 +23,8 @@ public class SortingCities {
         int km1 = distance.length;
 
 
-        System.out.println("Hi caroline the city which is 270 kms from Zurich is " + sortingCities.toFindTheCity(cityNames, distance) + " " + "kms is".concat(cityNames[5]));
-        System.out.println("Hi caroline the city which is 52 kms from Zurich is " + sortingCities.tofindTheCityAbove(cityNames, distance) + " " + "kms is".concat(cityNames[1]));
+        System.out.println("Hi caroline the city which is 270 kms from Zurich is " + sortingCities.toFindTheCity(distance) + " " + "kms is".concat(cityNames[5]));
+        System.out.println("Hi caroline the city which is 52 kms from Zurich is " + sortingCities.tofindTheCityAbove(distance) + " " + "kms is".concat(cityNames[1]));
 
 
     }
@@ -55,8 +55,7 @@ public class SortingCities {
         return upper;
     }
 
-    public Object toFindTheCity(String[] cityNames, int[] distance) {
-        String kilometers = "270";
+    public Object toFindTheCity(int[] distance) {
         int[] distanceOfCity = new int[distance.length];
         for (int index = 0; index < distance.length; index++) {
             distanceOfCity[index] = Integer.valueOf((String.valueOf(distance[index])));
@@ -68,8 +67,8 @@ public class SortingCities {
         return null;
     }
 
-    public Object tofindTheCityAbove(String[] cityNames, int[] distance) {
-        String kilometers = "50";
+    public Object tofindTheCityAbove(int[] distance) {
+
         int[] distanceOfCity = new int[distance.length];
         for (int index = 0; index < distance.length; index++) {
             distanceOfCity[index] = Integer.valueOf((String.valueOf(distance[index])));
